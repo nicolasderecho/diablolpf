@@ -10,19 +10,17 @@ gem 'kaminari' #Pagination
 gem 'searchlight' #Search
 gem "mongoid", "~> 6.2.0"
 gem 'bson_ext'
-gem 'rack-cors'
-gem 'thin' # Server
+gem 'rack-cors', require: 'rack/cors'
+
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'pg', '~> 0.15'
-
 gem 'airbrake', '~> 5.7'
-group :production do
-  gem 'newrelic_rpm'
-end
+
 
 group :development, :test do
+  gem 'thin' # Server
   #Manage ENV variables
   gem 'dotenv-rails'
   # Testing
@@ -49,3 +47,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :production do
+  gem 'puma'
+  gem 'newrelic_rpm'
+end

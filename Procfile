@@ -1,1 +1,1 @@
-puma:         bundle exec puma -e $RAILS_ENV -S ~/puma -C config/puma_$RAILS_ENV.rb -b unix:///tmp/puma.$SOCK_NAME.sock
+web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e $RAILS_ENV
