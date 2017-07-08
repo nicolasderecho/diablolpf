@@ -57,6 +57,7 @@ module DiablolpfApi
       allow do
         origins '*'
         resource '*', :headers => :any, :methods => [:get, :post, :options, :put, :patch, :delete, :head]
+        expose :location
       end
     end
 
