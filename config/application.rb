@@ -48,7 +48,7 @@ module DiablolpfApi
       g.orm :mongoid
     end
 
-    config.action_dispatch.default_headers = {
+    config.public_file_server.default_headers = {
       'Access-Control-Allow-Origin' => '*',
       'Access-Control-Request-Method' => %w{GET POST OPTIONS PUT PATCH DELETE HEAD}.join(",")
     }
@@ -57,7 +57,6 @@ module DiablolpfApi
       allow do
         origins '*'
         resource '*', :headers => :any, :methods => [:get, :post, :options, :put, :patch, :delete, :head]
-        expose :location
       end
     end
 
