@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :rune do
     weapons ['some weapon attributes']
     shields ['some shield attributes']

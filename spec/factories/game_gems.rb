@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :game_gem do
     gem_type { GameGem::TYPES::ALL.sample }
     code { |game_gem| "#{game_gem.gem_type}-#{GameGem::PARTS::ALL.sample}" }

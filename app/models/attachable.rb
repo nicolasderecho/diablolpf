@@ -5,8 +5,6 @@ class Attachable < Item
   field :shields, type: Array
   field :armors, type: Array
   field :helms, type: Array
-
-  mount_uploader :image, ImageUploader
   
   def image_path(image_name = nil)
     image_name = image_name.presence || "#{code}.png"

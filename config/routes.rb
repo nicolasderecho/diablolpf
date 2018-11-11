@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   namespace :api do
 
     match "/heartbeat", to: "api#heartbeat", via: [:get, :post, :put, :patch]
@@ -11,9 +10,6 @@ Rails.application.routes.draw do
     end
     resources :horadric_cube_formulas, only: [:index]
   end
-
-  
-  #match "/", to: "home#index", via: [:get, :post, :put, :patch]
 
   root to: "home#index"
 

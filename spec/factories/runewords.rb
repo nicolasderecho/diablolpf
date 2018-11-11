@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :runeword do
     code { |runeword| "Runeword code #{runeword.id}"}
     name 'a runeword'

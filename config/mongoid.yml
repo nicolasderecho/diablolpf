@@ -9,7 +9,7 @@ development:
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - localhost:27017
+        - mongo:27017
       options:
         raise_not_found_error: false
         # Change the default write concern. (default = { w: 1 })
@@ -137,7 +137,7 @@ test:
     default:
       database: diablolpf_test
       hosts:
-        - localhost:27017
+        - mongo:27017
       options:
         read:
           mode: :primary

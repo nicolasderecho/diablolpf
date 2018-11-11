@@ -1,36 +1,26 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.2'
+gem 'rails', '~> 5.2.1'
 
 gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'kaminari' #Pagination
 gem 'searchlight' #Search
-gem "mongoid", "~> 6.2.0"
+gem "mongoid", "~> 6.4.2"
 gem 'bson_ext'
 gem 'rack-cors', require: 'rack/cors'
-
-gem 'mini_magick'
-gem 'carrierwave'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
-gem 'pg', '~> 0.15'
 gem 'airbrake', '~> 5.7'
-
 
 group :development, :test do
   gem 'thin' # Server
   #Manage ENV variables
   gem 'dotenv-rails'
   # Testing
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'capybara-webkit'
-  gem 'selenium-webdriver', '~> 2.48.1'
   gem 'faker'
-  gem 'database_cleaner', '~> 1.5'
   #Debug and Dev
   gem 'listen', '~> 3.0.5'
   gem 'pry'
